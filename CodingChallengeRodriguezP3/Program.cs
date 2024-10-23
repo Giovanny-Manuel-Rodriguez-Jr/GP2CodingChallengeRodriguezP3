@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 
 class Challenges
 {
@@ -18,6 +17,7 @@ class Challenges
             Console.WriteLine("5. Calculate the area of a triangle");
             Console.WriteLine("6. Determine if a number is less than or equal to zero");
             Console.WriteLine("7. Convert Voltage to Power");
+            Console.WriteLine("8. Determine if the sum of two numbers is less than a hundred");
 
             string choice = Console.ReadLine();
 
@@ -79,6 +79,18 @@ class Challenges
 
                     Console.WriteLine(Voltage(number1int, number2int));
                     break;
+                case "8":
+
+                    Console.WriteLine("Input two numbers to determine if they are less than 100");
+
+                    var number9 = Console.ReadLine();
+                    int number9int = int.Parse(number9);
+
+                    var number10 = Console.ReadLine();
+                    int number10int = int.Parse(number10);
+
+                    Console.WriteLine(LessThan100(number9int, number10int)); 
+                    break;
 
             }
 
@@ -88,7 +100,7 @@ class Challenges
             if (continueChoice != "y")
             {
                 Console.WriteLine("Exiting the program. Goodbye!");
-                continueProgram = false; // Ends the loop if user says 'n'
+                continueProgram = false; // Ends the loop if user says 'n' 
             }
         }
     }
@@ -126,5 +138,10 @@ class Challenges
     public static int Voltage(int number1, int number2)
     {
         return number1 * number2;
+    }
+
+    public static bool LessThan100(int number9, int number10)
+    {
+        return number9 + number10 < 100;
     }
 }
