@@ -18,6 +18,7 @@ class Challenges
             Console.WriteLine("6. Determine if a number is less than or equal to zero");
             Console.WriteLine("7. Convert Voltage to Power");
             Console.WriteLine("8. Determine if the sum of two numbers is less than a hundred");
+            Console.WriteLine("9. Determine if the your two value what where inputed are equal to eachother");
 
             string choice = Console.ReadLine();
 
@@ -92,6 +93,22 @@ class Challenges
                     Console.WriteLine(LessThan100(number9int, number10int)); 
                     break;
 
+                case "9":
+
+                   Console.WriteLine("Input two numbers to find out if they are equal to eachother");
+
+                        var number11 = Console.ReadLine();
+                    int number11int = int.Parse(number11);
+
+                    Console.WriteLine("Now input your second number");
+
+                    var number12 = Console.ReadLine();
+                    int number12int = int.Parse(number12);
+                    Console.WriteLine("Are your two numbers equal to eachother? " + IsEqual(number11int, number12int));
+                    break;
+
+
+
             }
 
             // Ask if the user wants to try another challenge
@@ -143,5 +160,10 @@ class Challenges
     public static bool LessThan100(int number9, int number10)
     {
         return number9 + number10 < 100;
+    }
+
+    public static bool IsEqual(int number11, int number12)
+    {
+        return number11 <= number12;
     }
 }
