@@ -19,6 +19,7 @@ class Challenges
             Console.WriteLine("7. Convert Voltage to Power");
             Console.WriteLine("8. Determine if the sum of two numbers is less than a hundred");
             Console.WriteLine("9. Determine if the your two value what where inputed are equal to eachother");
+            Console.WriteLine("10. Write a word or a sentence that returns with something");
 
             string choice = Console.ReadLine();
 
@@ -90,14 +91,14 @@ class Challenges
                     var number10 = Console.ReadLine();
                     int number10int = int.Parse(number10);
 
-                    Console.WriteLine(LessThan100(number9int, number10int)); 
+                    Console.WriteLine(LessThan100(number9int, number10int));
                     break;
 
                 case "9":
 
-                   Console.WriteLine("Input two numbers to find out if they are equal to eachother");
+                    Console.WriteLine("Input two numbers to find out if they are equal to eachother");
 
-                        var number11 = Console.ReadLine();
+                    var number11 = Console.ReadLine();
                     int number11int = int.Parse(number11);
 
                     Console.WriteLine("Now input your second number");
@@ -106,6 +107,17 @@ class Challenges
                     int number12int = int.Parse(number12);
                     Console.WriteLine("Are your two numbers equal to eachother? " + IsEqual(number11int, number12int));
                     break;
+
+                case "10":
+                   
+                    
+                        Console.WriteLine("now let's add somehting to the start of your word");
+                        var words = Console.ReadLine();
+                        Console.WriteLine(GiveMeSomething(words));
+                    
+                    break;
+
+
 
 
 
@@ -166,4 +178,11 @@ class Challenges
     {
         return number11 <= number12;
     }
+
+    public static string GiveMeSomething(string words)
+    {
+        return "something " + words;
+    }
+
+    
 }
