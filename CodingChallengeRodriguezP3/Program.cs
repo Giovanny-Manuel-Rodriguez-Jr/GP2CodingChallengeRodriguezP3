@@ -19,7 +19,8 @@ class Challenges
             Console.WriteLine("7. Convert Voltage to Power");
             Console.WriteLine("8. Determine if the sum of two numbers is less than a hundred");
             Console.WriteLine("9. Determine if the your two value what where inputed are equal to eachother");
-            Console.WriteLine("10. Write a word or a sentence that returns with something");
+            Console.WriteLine("10 Write a word or a sentence that returns with something");
+            Console.WriteLine("11.The function reverses a boolean value");
 
             string choice = Console.ReadLine();
 
@@ -117,6 +118,33 @@ class Challenges
                     
                     break;
 
+                case "11":
+
+                    Console.WriteLine("Lets reverse a boolean");
+                    var trueorfalse = Console.ReadLine();
+                    
+
+                    
+                    if (trueorfalse == "true")
+                    {
+                            Console.WriteLine("Its false");
+                    }
+                    else if (trueorfalse == "false")
+                    {
+                            Console.WriteLine("Its True");
+                    }
+                    else
+                    {
+                            Console.WriteLine("Try again maybe you mispelled something");
+                    }
+                    
+
+
+                    break;
+
+
+                        
+
 
 
 
@@ -183,6 +211,7 @@ class Challenges
     {
         return "something " + words;
     }
+
 
     
 }
