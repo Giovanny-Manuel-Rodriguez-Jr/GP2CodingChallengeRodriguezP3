@@ -21,6 +21,7 @@ class Challenges
             Console.WriteLine("9. Determine if the your two value what where inputed are equal to eachother");
             Console.WriteLine("10 Write a word or a sentence that returns with something");
             Console.WriteLine("11.The function reverses a boolean value");
+            Console.WriteLine("12.Type a number to find out how many seconds are in the hours inputed in");
 
             string choice = Console.ReadLine();
 
@@ -142,8 +143,17 @@ class Challenges
 
                     break;
 
+                case "12":
+                    Console.WriteLine("Let's Find out how many seconds are in the amount of hours u input.");
+                    Console.Write("Enter an amount of hour(s): ");
+                    int time = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"{time} hours is {CalcHour(time)} in seconds.");
+                    break;
 
-                        
+
+
+
+
 
 
 
@@ -212,6 +222,11 @@ class Challenges
         return "something " + words;
     }
 
+    public static int CalcHour(int time)
+    {
+        return time * 3600;
+    }
 
-    
+
+
 }
