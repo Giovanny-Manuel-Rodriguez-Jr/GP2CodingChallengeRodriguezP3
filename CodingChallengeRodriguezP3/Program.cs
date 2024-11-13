@@ -19,9 +19,10 @@ class Challenges
             Console.WriteLine("7. Convert Voltage to Power");
             Console.WriteLine("8. Determine if the sum of two numbers is less than a hundred");
             Console.WriteLine("9. Determine if the your two value what where inputed are equal to eachother");
-            Console.WriteLine("10 Write a word or a sentence that returns with something");
+            Console.WriteLine("10.Write a word or a sentence that returns with something");
             Console.WriteLine("11.The function reverses a boolean value");
             Console.WriteLine("12.Type a number to find out how many seconds are in the hours inputed in");
+            Console.WriteLine("13.Determine The Degrees Of Internal Angles Depedning On The Amount Of Sides \n The Shape Has.");
 
             string choice = Console.ReadLine();
 
@@ -150,6 +151,23 @@ class Challenges
                     Console.WriteLine($"{time} hours is {CalcHour(time)} in seconds.");
                     break;
 
+                case "13":
+                    Console.WriteLine("Please input the number of sides your shape has.");
+                    int firme = int.Parse(Console.ReadLine());
+
+                    if(firme <= 2)
+                    {
+                        Console.WriteLine("The number needs to be 2 or more on the dead lokas");
+                    }
+                    else if(firme > 2)
+                    {
+                        Console.WriteLine($"The Number of {firme} is {SumPolygon(firme)} in internal angles.");
+                    }
+                    
+
+                    
+                    break;
+
 
 
 
@@ -160,6 +178,8 @@ class Challenges
 
 
             }
+
+
 
             // Ask if the user wants to try another challenge
             Console.WriteLine("\nWould you like to try another challenge? (y/n)");
@@ -225,6 +245,11 @@ class Challenges
     public static int CalcHour(int time)
     {
         return time * 3600;
+    }
+
+    public static int SumPolygon(int firme)
+    {
+        return (firme - 2) * 180;
     }
 
 
