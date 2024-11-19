@@ -23,6 +23,7 @@ class Challenges
             Console.WriteLine("11.The function reverses a boolean value");
             Console.WriteLine("12.Type a number to find out how many seconds are in the hours inputed in");
             Console.WriteLine("13.Determine The Degrees Of Internal Angles Depedning On The Amount Of Sides \n The Shape Has.");
+            Console.WriteLine("14.Write a word or a sentence that returns your sentence with edabit at the end of it.");
 
             string choice = Console.ReadLine();
 
@@ -170,6 +171,15 @@ class Challenges
 
 
 
+                case "14":
+
+
+                    Console.WriteLine("now let's add Edabit to the end of your word");
+                    var words1 = Console.ReadLine();
+                    Console.WriteLine(Mubashir(words1));
+
+                    break; 
+
 
 
 
@@ -250,6 +260,11 @@ class Challenges
     public static int SumPolygon(int firme)
     {
         return (firme - 2) * 180;
+    }
+
+    public static string Mubashir(string words1)
+    {
+        return words1 + "Edabit";
     }
 
 
