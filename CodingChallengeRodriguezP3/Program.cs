@@ -1,6 +1,7 @@
 ﻿using System;
 
 class Challenges
+    // script made by loksz
 {
     public static void Main(string[] args)
     {
@@ -21,10 +22,11 @@ class Challenges
             Console.WriteLine("9. Determine if the your two value what where inputed are equal to eachother");
             Console.WriteLine("10.Write a word or a sentence that returns with something");
             Console.WriteLine("11.The function reverses a boolean value");
-            Console.WriteLine("12.Type a number to find out how many seconds are in the hours inputed in");
+            Console.WriteLine("12.Input a number to find out how many seconds are in the hours inputed in");
             Console.WriteLine("13.Determine The Degrees Of Internal Angles Depedning On The Amount Of Sides \n The Shape Has.");
             Console.WriteLine("14.Write a word or a sentence that returns your sentence with edabit at the end of it.");
-
+            Console.WriteLine("15.Input a combenation of a and b to determine if it is true or false.");
+            // script made by loksz
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -178,7 +180,19 @@ class Challenges
                     var words1 = Console.ReadLine();
                     Console.WriteLine(Mubashir(words1));
 
-                    break; 
+                    break;
+
+                case "15":
+
+                    Console.WriteLine(" Now input a combination of true or false neta pa dead lokas");
+                        var a = Console.ReadLine();
+                    bool abool = bool.Parse(a);
+                    Console.WriteLine("Enter True or False again");
+                    var b = Console.ReadLine();
+                    bool bbool = bool.Parse(b);
+                    Console.WriteLine("And (" + a + ", " + b + ") -> " + Papasdeadlokas(abool, bbool) + ".");
+                    
+                    break;
 
 
 
@@ -266,6 +280,22 @@ class Challenges
     {
         return words1 + "Edabit";
     }
+
+    public static bool Papasdeadlokas(bool a, bool b)
+    {
+        if(a== true && b == true)
+        {
+            Console.WriteLine("True");
+            return true;
+          
+        }
+        else
+        {
+            Console.WriteLine("False");
+            return false;
+        }
+    }
+    // script made by loksz
 
 
 
