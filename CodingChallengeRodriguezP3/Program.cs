@@ -1,7 +1,7 @@
 ﻿using System;
 
 class Challenges
-    // script made by loksz
+    // loksz
 {
     public static void Main(string[] args)
     {
@@ -26,7 +26,9 @@ class Challenges
             Console.WriteLine("13.Determine The Degrees Of Internal Angles Depedning On The Amount Of Sides \n The Shape Has.");
             Console.WriteLine("14.Write a word or a sentence that returns your sentence with edabit at the end of it.");
             Console.WriteLine("15.Input a combenation of a and b to determine if it is true or false.");
-            // script made by loksz
+            Console.WriteLine("16.Input the amount of 3 and 2 pointers scored,to determine your final score.");
+
+            //  loksz
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -195,6 +197,16 @@ class Challenges
                     break;
 
 
+                case "16":
+
+                    Console.WriteLine(" Determine how many points you scored");
+                    Console.Write("Enter your amount of 2 pointers: ");
+                    int num13 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter your amount of 3 pointers: ");
+                    int num14 = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"The amount of 2 pointers is {num13} and 3 points is {num14} Which is equal to : {PepeTheSureño(num13, num14)} points!");
+                    break;
+
 
 
 
@@ -295,7 +307,12 @@ class Challenges
             return false;
         }
     }
-    // script made by loksz
+
+    public static int PepeTheSureño(int number13, int number14)
+    {
+        return number13 * 2 + number14 * 3;
+    }
+    
 
 
 
