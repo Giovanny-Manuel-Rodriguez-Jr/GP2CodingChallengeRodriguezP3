@@ -27,6 +27,7 @@ class Challenges
             Console.WriteLine("14.Write a word or a sentence that returns your sentence with edabit at the end of it.");
             Console.WriteLine("15.Input a combenation of a and b to determine if it is true or false.");
             Console.WriteLine("16.Input the amount of 3 and 2 pointers scored,to determine your final score.");
+            Console.WriteLine("17.Input your lenght and width to determine the perimeter of your rectangle.");
 
             //  loksz
             string choice = Console.ReadLine();
@@ -122,6 +123,7 @@ class Challenges
                         Console.WriteLine("now let's add somehting to the start of your word");
                         var words = Console.ReadLine();
                         Console.WriteLine(GiveMeSomething(words));
+                        
                     
                     break;
 
@@ -205,6 +207,17 @@ class Challenges
                     Console.Write("Enter your amount of 3 pointers: ");
                     int num14 = int.Parse(Console.ReadLine());
                     Console.WriteLine($"The amount of 2 pointers is {num13} and 3 points is {num14} Which is equal to : {PepeTheSureño(num13, num14)} points!");
+                    break;
+
+
+                case "17":
+
+                    Console.WriteLine(" Determine how many points you scored");
+                    Console.Write("Enter your length : ");
+                    int num15 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter your width  : ");
+                    int num16 = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"The Perimeter of the numbers {num15} and {num16} is equal to : {Chaks(num15, num16)} feet!");
                     break;
 
 
@@ -312,7 +325,12 @@ class Challenges
     {
         return number13 * 2 + number14 * 3;
     }
-    
+
+    public static int Chaks(int number15, int number16)
+    {
+        return number15 * 2 + number16 * 2;
+    }
+
 
 
 
