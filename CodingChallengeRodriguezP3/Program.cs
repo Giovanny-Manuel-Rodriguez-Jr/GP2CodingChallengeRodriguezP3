@@ -28,6 +28,7 @@ class Challenges
             Console.WriteLine("15.Input a combenation of a and b to determine if it is true or false.");
             Console.WriteLine("16.Input the amount of 3 and 2 pointers scored,to determine your final score.");
             Console.WriteLine("17.Input your lenght and width to determine the perimeter of your rectangle.");
+            Console.WriteLine("18.Write a word or a sentence that returns with Hello");
 
             //  loksz
             string choice = Console.ReadLine();
@@ -221,6 +222,16 @@ class Challenges
                     break;
 
 
+                case "18":
+
+
+                    Console.WriteLine("now let's add hello to the start of your word");
+                    var words2 = Console.ReadLine();
+                    Console.WriteLine(HelloLeva(words2));
+
+
+                    break;
+
 
 
 
@@ -329,6 +340,11 @@ class Challenges
     public static int Chaks(int number15, int number16)
     {
         return number15 * 2 + number16 * 2;
+    }
+
+    public static string HelloLeva(string words2)
+    {
+        return "Hello " + words2 + "!";
     }
 
 
