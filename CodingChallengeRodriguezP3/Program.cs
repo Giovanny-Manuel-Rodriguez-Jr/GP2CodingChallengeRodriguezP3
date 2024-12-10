@@ -29,6 +29,8 @@ class Challenges
             Console.WriteLine("16.Input the amount of 3 and 2 pointers scored,to determine your final score.");
             Console.WriteLine("17.Input your lenght and width to determine the perimeter of your rectangle.");
             Console.WriteLine("18.Write a word or a sentence that returns with Hello");
+            Console.WriteLine("19.Input the number of animals you have(chickens,cows,and pigs)");
+            Console.WriteLine("20.Input the number of (wins,draws,and losses) you have to determine the points your team has in the league.");
 
             //  loksz
             string choice = Console.ReadLine();
@@ -232,7 +234,29 @@ class Challenges
 
                     break;
 
+                case "19":
 
+                    Console.WriteLine("Tell me how many chickens, cows, and pigs");
+                    Console.Write("Enter the chickens : ");
+                    int num17 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter thhe cows  : ");
+                    int num18 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter thhe pigs  : ");
+                    int num19 = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"The legs of the animals are {num17} chicken legs , {num18} cow legs , and {num19} pig legs is equal to : {fam(num17, num18, num19)} legs!");
+                    break;
+
+                case "20":
+
+                    Console.WriteLine("Input the amount of wins, draws and loses you have");
+                    Console.Write("Enter the amount of wins : ");
+                    int num20 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter the amount of draws : ");
+                    int num21 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter the amount of loses  : ");
+                    int num22 = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"The wins are {num20} , {num21} the draws are , and the losses are {num22} whihc is equal to : {footballfoo(num20, num21, num22)} points!");
+                    break;
 
 
 
@@ -345,6 +369,18 @@ class Challenges
     public static string HelloLeva(string words2)
     {
         return "Hello " + words2 + "!";
+    }
+
+    
+
+    public static int fam(int number17, int number18, int number19)
+    {
+        return number17 * 2 + number18 * 4 + number19 * 4;
+    }
+
+    public static int footballfoo(int number20, int number21, int number22)
+    {
+        return number20 * 3 + number21 * 1 + number22 * 0;
     }
 
 
