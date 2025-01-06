@@ -1,7 +1,7 @@
 ﻿using System;
 
 class Challenges
-    // loksz
+// loksz
 {
     public static void Main(string[] args)
     {
@@ -31,8 +31,10 @@ class Challenges
             Console.WriteLine("18.Write a word or a sentence that returns with Hello");
             Console.WriteLine("19.Input the number of animals you have(chickens,cows,and pigs)");
             Console.WriteLine("20.Input the number of (wins,draws,and losses) you have to determine the points your team has in the league.");
+            Console.WriteLine("21. Enter a number to get the corresponding month");
 
-            //  loksz
+
+
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -121,35 +123,35 @@ class Challenges
                     break;
 
                 case "10":
-                   
-                    
-                        Console.WriteLine("now let's add somehting to the start of your word");
-                        var words = Console.ReadLine();
-                        Console.WriteLine(GiveMeSomething(words));
-                        
-                    
+
+
+                    Console.WriteLine("now let's add somehting to the start of your word");
+                    var words = Console.ReadLine();
+                    Console.WriteLine(GiveMeSomething(words));
+
+
                     break;
 
                 case "11":
 
                     Console.WriteLine("Lets reverse a boolean");
                     var trueorfalse = Console.ReadLine();
-                    
 
-                    
+
+
                     if (trueorfalse == "true")
                     {
-                            Console.WriteLine("Its false");
+                        Console.WriteLine("Its false");
                     }
                     else if (trueorfalse == "false")
                     {
-                            Console.WriteLine("Its True");
+                        Console.WriteLine("Its True");
                     }
                     else
                     {
-                            Console.WriteLine("Try again maybe you mispelled something");
+                        Console.WriteLine("Try again maybe you mispelled something");
                     }
-                    
+
 
 
                     break;
@@ -165,17 +167,17 @@ class Challenges
                     Console.WriteLine("Please input the number of sides your shape has.");
                     int firme = int.Parse(Console.ReadLine());
 
-                    if(firme <= 2)
+                    if (firme <= 2)
                     {
                         Console.WriteLine("The number needs to be 2 or more on the dead lokas");
                     }
-                    else if(firme > 2)
+                    else if (firme > 2)
                     {
                         Console.WriteLine($"The Number of {firme} is {SumPolygon(firme)} in internal angles.");
                     }
-                    
 
-                    
+
+
                     break;
 
 
@@ -192,13 +194,13 @@ class Challenges
                 case "15":
 
                     Console.WriteLine(" Now input a combination of true or false neta pa dead lokas");
-                        var a = Console.ReadLine();
+                    var a = Console.ReadLine();
                     bool abool = bool.Parse(a);
                     Console.WriteLine("Enter True or False again");
                     var b = Console.ReadLine();
                     bool bbool = bool.Parse(b);
                     Console.WriteLine("And (" + a + ", " + b + ") -> " + Papasdeadlokas(abool, bbool) + ".");
-                    
+
                     break;
 
 
@@ -239,9 +241,9 @@ class Challenges
                     Console.WriteLine("Tell me how many chickens, cows, and pigs");
                     Console.Write("Enter the chickens : ");
                     int num17 = int.Parse(Console.ReadLine());
-                    Console.Write("Enter thhe cows  : ");
+                    Console.Write("Enter the cows  : ");
                     int num18 = int.Parse(Console.ReadLine());
-                    Console.Write("Enter thhe pigs  : ");
+                    Console.Write("Enter the pigs  : ");
                     int num19 = int.Parse(Console.ReadLine());
                     Console.WriteLine($"The legs of the animals are {num17} chicken legs , {num18} cow legs , and {num19} pig legs is equal to : {fam(num17, num18, num19)} legs!");
                     break;
@@ -257,6 +259,29 @@ class Challenges
                     int num22 = int.Parse(Console.ReadLine());
                     Console.WriteLine($"The wins are {num20} , {num21} the draws are , and the losses are {num22} whihc is equal to : {footballfoo(num20, num21, num22)} points!");
                     break;
+                case "21":
+                    Console.WriteLine("You chose Month Selector. Enter a number between 1 and 12:");
+                    if (int.TryParse(Console.ReadLine(), out int monthNumber))
+                    {
+                        string monthName = months(monthNumber);
+                        if (monthName != null)
+                        {
+                            Console.WriteLine($"The month for number {monthNumber} is {monthName}.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid number. Please enter a number between 1 and 12.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                    }
+                    break;
+
+
+
+
 
 
 
@@ -343,11 +368,11 @@ class Challenges
 
     public static bool Papasdeadlokas(bool a, bool b)
     {
-        if(a== true && b == true)
+        if (a == true && b == true)
         {
             Console.WriteLine("True");
             return true;
-          
+
         }
         else
         {
@@ -371,7 +396,7 @@ class Challenges
         return "Hello " + words2 + "!";
     }
 
-    
+
 
     public static int fam(int number17, int number18, int number19)
     {
@@ -382,8 +407,34 @@ class Challenges
     {
         return number20 * 3 + number21 * 1 + number22 * 0;
     }
+    public static string months(int number)
+    {
+        switch (number)
+        {
+            case 1: return "January";
+            case 2: return "February";
+            case 3: return "March";
+            case 4: return "April";
+            case 5: return "May";
+            case 6: return "June";
+            case 7: return "July";
+            case 8: return "August";
+            case 9: return "September";
+            case 10: return "October";
+            case 11: return "November";
+            case 12: return "December";
+            default: return null;
 
 
 
+
+
+        }
+    }
 
 }
+
+
+
+
+
