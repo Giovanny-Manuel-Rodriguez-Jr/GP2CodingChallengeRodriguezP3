@@ -32,6 +32,9 @@ class Challenges
             Console.WriteLine("19.Input the number of animals you have(chickens,cows,and pigs)");
             Console.WriteLine("20.Input the number of (wins,draws,and losses) you have to determine the points your team has in the league.");
             Console.WriteLine("21. Enter a number to get the corresponding month");
+            Console.WriteLine("22. Find the minimum and maximum in an array");
+            Console.WriteLine("23. An array of integers (positive or negative or both) and return the sum of the absolute value of each element");
+
 
 
 
@@ -278,6 +281,29 @@ class Challenges
                         Console.WriteLine("Invalid input. Please enter a valid number.");
                     }
                     break;
+                case "22":
+                    Console.WriteLine("You chose to find the minimum and maximum in an array.");
+                    Console.WriteLine("Enter numbers separated by commas (EXAMPLE: 13,96,2,4): ");
+                    string input = Console.ReadLine();
+                    int[] numbers = input.Split(',').Select(int.Parse).ToArray();
+                    int[] result = fourfoot11fresa(numbers);
+                    Console.WriteLine($"The minimum number is {result[0]} and the maximum number is {result[1]}.");
+                    break;
+
+                case "23":
+                    Console.WriteLine("You chose to find the minimum and maximum in an array.");
+                    Console.WriteLine("Enter numbers separated by commas (EXAMPLE: 13,96,2,4): ");
+                    string fresas = Console.ReadLine();
+                    int[] inputArray = fresas.Split(',').Select(int.Parse).ToArray();
+                    int[] chicken = freshmanhunter(numbers);
+                    Console.WriteLine($);
+                    break;
+
+
+
+
+                    
+
 
 
 
@@ -432,7 +458,25 @@ class Challenges
         }
     }
 
+    public static int[] fourfoot11fresa(int[] arr)
+    {
+        int min = arr.Min();
+        int max = arr.Max();
+        return new int[] { min, max };
+    }
+
+    public static int[] freshmanhunter(int[] arr)
+    {
+        int sum = 0;
+
+        foreach(int chicken)
+        {
+
+        }
+    }
+
 }
+
 
 
 
