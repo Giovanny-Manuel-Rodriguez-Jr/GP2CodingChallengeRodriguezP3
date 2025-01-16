@@ -33,7 +33,9 @@ class Challenges
             Console.WriteLine("20.Input the number of (wins,draws,and losses) you have to determine the points your team has in the league.");
             Console.WriteLine("21. Enter a number to get the corresponding month");
             Console.WriteLine("22. Find the minimum and maximum in an array");
+            Console.WriteLine("23. ffdsfdsfsd dfsdf dsf sd");
             Console.WriteLine("24. provide a base and exponent and return the calculation ");
+            Console.WriteLine("25. multiply all values in a array by the am ");
 
 
 
@@ -291,34 +293,57 @@ class Challenges
                     break;
 
                 case "23":
-                    Console.WriteLine("Input some integers");
-                    
-                    int num30 = int.Parse(Console.ReadLine());
-                    Console.Write("another : ");
-                    int num31 = int.Parse(Console.ReadLine());
-                    Console.Write("another  : ");
-                    int num32 = int.Parse(Console.ReadLine());
-                    Console.Write("another  : ");
-                    int num33 = int.Parse(Console.ReadLine());
-                    Console.Write("another  : ");
-                    int num34 = int.Parse(Console.ReadLine());
-                    Console.Write("another  : ");
-                    int num35 = int.Parse(Console.ReadLine());
-                    Console.WriteLine(challenge("25 is the answer"));
-                    break;
+                    {
+                        Console.WriteLine("Now we are going to get the absolute value of numbers");
+                        var number23 = Console.ReadLine();
+                        int number23int = int.Parse(number23);
+                        Console.WriteLine("Give me your second number");
+                        var number24 = Console.ReadLine();
+                        int number24int = int.Parse(number24);
+                        Console.WriteLine("Give me your third number");
+                        var number25 = Console.ReadLine();
+                        int number25int = int.Parse(number25);
+                        Console.WriteLine("Give me your last number");
+                        var number26 = Console.ReadLine();
+                        int number26int = int.Parse(number26);
+                        Console.WriteLine("LosJuniors)" + number23 + "," + number24 + "," + number25 + "," + number26 + "])->" + LosJunior(number23int, number24int, number25int, number26int));
+                        break;
 
+
+                    }
 
                 case "24":
                     Console.WriteLine("preovide a base and a power to solve a exponent .");
-                    Console.Write("enter the base: ");
+                    Console.Write("enter the base(s): ");
                     double baseNumber = int.Parse(Console.ReadLine());
                     Console.Write("enter the power: ");
                     int exponent = int.Parse(Console.ReadLine());
                     Console.WriteLine($"The returned calculation is: {Power(baseNumber, exponent)}");
                     break;
+                case "25":
 
+                    // This case represents your scenario with multiplying by length
+                    Console.WriteLine("You chose to multiply all values in the array by the number of values in the array.");
+                    Console.WriteLine("Enter numbers separated by commas (EXAMPLE: 1,2,3,4): ");
 
+                    // Read user input and assign it to a unique variable
+                    string userInput = Console.ReadLine();
 
+                    // Split the input string and parse it into an array of integers
+                    int[] numArray = userInput.Split(',').Select(int.Parse).ToArray();
+
+                    // Get the length of the array
+                    int arrayLength = numArray.Length;
+
+                    // Multiply each value in the array by the length of the array
+                    for (int i = 0; i < numArray.Length; i++)
+                    {
+                        numArray[i] *= arrayLength;
+                    }
+
+                    // Output the modified array
+                    Console.WriteLine("The modified array is: " + string.Join(", ", numArray));
+                    break;
 
 
 
@@ -471,15 +496,35 @@ class Challenges
         }
     }
 
-    public static int challenge()
+    public static int[] FindMinMax(int[] arr)
     {
-      
+        int min = arr.Min();
+        int max = arr.Max();
+        return new int[] { min, max };
     }
-    
     static double Power(double baseNumber, int exponent)
     {
         return Math.Pow(baseNumber, exponent);
     }
+    public static int LosJunior(int number23, int number24, int number25, int number26)
+    {
+        return (Math.Abs(number23)) + (Math.Abs(number24)) + (Math.Abs(number25)) + (Math.Abs(number26));
+    }
+    public static int[] MultiplyByLength(int[] arr)
+    {
+        int length = arr.Length; // Get the length of the array
+        int[] result = new int[length]; // Create a new array to hold the results
+
+        for (int i = 0; i < length; i++)
+        {
+            result[i] = arr[i] * length; // Multiply each element by the length of the array
+        }
+
+        return result; // Return the new array with the multiplied values
+    }
+
+
+
 
 }
 
