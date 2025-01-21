@@ -33,9 +33,10 @@ class Challenges
             Console.WriteLine("20.Input the number of (wins,draws,and losses) you have to determine the points your team has in the league.");
             Console.WriteLine("21. Enter a number to get the corresponding month");
             Console.WriteLine("22. Find the minimum and maximum in an array");
-            Console.WriteLine("23. ffdsfdsfsd dfsdf dsf sd");
+            Console.WriteLine("23. sum up all the numbers in a array");
             Console.WriteLine("24. provide a base and exponent and return the calculation ");
-            Console.WriteLine("25. multiply all values in a array by the am ");
+            Console.WriteLine("25. multiply all values in a array by the aount of values in the array");
+            Console.WriteLine("26. Input 2 words to see how many letters they have different.")
 
 
 
@@ -306,7 +307,7 @@ class Challenges
                         Console.WriteLine("Give me your last number");
                         var number26 = Console.ReadLine();
                         int number26int = int.Parse(number26);
-                        Console.WriteLine("LosJuniors)" + number23 + "," + number24 + "," + number25 + "," + number26 + "])->" + LosJunior(number23int, number24int, number25int, number26int));
+                        Console.WriteLine("Your Array of " + number23 + "," + number24 + "," + number25 + "," + number26 + " added all together is " + LosJunior(number23int, number24int, number25int, number26int));
                         break;
 
 
@@ -344,6 +345,23 @@ class Challenges
                     // Output the modified array
                     Console.WriteLine("The modified array is: " + string.Join(", ", numArray));
                     break;
+                case "26":
+
+                    Console.WriteLine("You chose to calculate the Hamming Distance.");
+                    Console.WriteLine("Enter the first string: ");
+                    string str1 = Console.ReadLine();
+
+                    Console.WriteLine("Enter the second string: ");
+                    string str2 = Console.ReadLine();
+
+                    int distance = HammingDistance(str1, str2);
+
+                    if (distance != -1) // Check for valid computation
+                    {
+                        Console.WriteLine($"The Hamming Distance between the strings is: {distance}");
+                    }
+                    break;
+
 
 
 
@@ -522,11 +540,38 @@ class Challenges
 
         return result; // Return the new array with the multiplied values
     }
+    // Hamming distance function
+    public static int HammingDistance(string str1, string str2)
+    {
+        // Check if strings are the same length
+        if (str1.Length != str2.Length)
+        {
+            Console.WriteLine("wrong length foo");
+            return -1; // Return an error value
+        }
+
+        // Compute the Hamming distance
+        int hammingDistance = 0;
+        for (int i = 0; i < str1.Length; i++)
+        {
+            if (str1[i] != str2[i]) // Compare each character
+            {
+                hammingDistance++; // Increment for differences
+            }
+        }
+
+        return hammingDistance; // Return the calculated distance
+    }
+
+
 
 
 
 
 }
+
+
+
 
 
 
