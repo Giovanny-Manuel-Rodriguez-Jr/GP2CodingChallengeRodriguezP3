@@ -36,7 +36,8 @@ class Challenges
             Console.WriteLine("23. sum up all the numbers in a array");
             Console.WriteLine("24. provide a base and exponent and return the calculation ");
             Console.WriteLine("25. multiply all values in a array by the aount of values in the array");
-            Console.WriteLine("26. Input 2 words to see how many letters they have different.")
+            Console.WriteLine("26. Input 2 words to see how many letters they have different.");
+            Console.WriteLine("Enter a name and it will swap the last name to be in the front");
 
 
 
@@ -362,6 +363,16 @@ class Challenges
                     }
                     break;
 
+                case "27":
+
+
+                    Console.WriteLine("now lets shuffle a name by swapping the first and last name");
+                    var name = Console.ReadLine();
+                    Console.WriteLine(NameShuffle(name));
+
+                    break;
+
+
 
 
 
@@ -564,11 +575,32 @@ class Challenges
     }
 
 
+    public static string NameShuffle(string name)
+    {
+        // Split the name into first and last using space as a separator
+        string[] parts = name.Split(' ');
+
+        // Return the reversed order of the name
+        return parts[1] + " " + parts[0];
+    }
+
+
+
+
 
 
 
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
