@@ -37,7 +37,8 @@ class Challenges
             Console.WriteLine("24. provide a base and exponent and return the calculation ");
             Console.WriteLine("25. multiply all values in a array by the aount of values in the array");
             Console.WriteLine("26. Input 2 words to see how many letters they have different.");
-            Console.WriteLine("Enter a name and it will swap the last name to be in the front");
+            Console.WriteLine("27.Enter a name and it will swap the last name to be in the front");
+            Console.WriteLine("28.Enter two numbers to determine which one is smaller");
 
 
 
@@ -372,6 +373,16 @@ class Challenges
 
                     break;
 
+                case "28":
+                    Console.WriteLine("You chose to find the minimum in an array.");
+                    Console.WriteLine("Enter numbers separated by commas (EXAMPLE: 1,2,3,4): ");
+                    string fresitatapper = Console.ReadLine();
+                    int[] inputArray = fresitatapper.Split(',').Select(int.Parse).ToArray();
+                    int minimumValue = FindMinimum(inputArray);
+                    Console.WriteLine($"The minimum number is {minimumValue}.");
+                    break;
+
+
 
 
 
@@ -583,6 +594,12 @@ class Challenges
         // Return the reversed order of the name
         return parts[1] + " " + parts[0];
     }
+    public static int FindMinimum(int[] numbersArray)
+    {
+        int smallest = numbersArray.Min();
+        return smallest;
+    }
+
 
 
 
