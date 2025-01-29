@@ -39,6 +39,7 @@ class Challenges
             Console.WriteLine("26. Input 2 words to see how many letters they have different.");
             Console.WriteLine("27.Enter a name and it will swap the last name to be in the front");
             Console.WriteLine("28.Enter two numbers to determine which one is smaller");
+            Console.WriteLine("29. A function that takes an integer and returns the factorial of that integer. \n That is, the integer multiplied by all positive lower integers.");
 
 
 
@@ -382,6 +383,15 @@ class Challenges
                     Console.WriteLine($"The minimum number is {minimumValue}.");
                     break;
 
+                case "29":
+                    Console.WriteLine(" Enter a number to find the factoral of it.");
+                    Console.Write("Enter a number: ");
+                    int getajopb = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"Factorial of {getajopb} is: {Factorial(getajopb)}");
+                   
+
+                    break;
+
 
 
 
@@ -599,6 +609,20 @@ class Challenges
         int smallest = numbersArray.Min();
         return smallest;
     }
+
+    public static int Factorial(int number)
+    {
+        if (number < 0)
+            throw new ArgumentException("Factorial is not defined for negative numbers.");
+
+        int result = 1;
+        for (int i = 2; i <= number; i++)
+        {
+            result *= i;
+        }
+        return result;
+    }
+
 
 
 
