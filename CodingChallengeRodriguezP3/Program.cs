@@ -36,11 +36,11 @@ class Challenges
             Console.WriteLine("23. sum up all the numbers in a array");
             Console.WriteLine("24. provide a base and exponent and return the calculation ");
             Console.WriteLine("25. multiply all values in a array by the aount of values in the array");
-            Console.WriteLine("26. Input 2 words to see how many letters they have different.");
-            Console.WriteLine("27.Enter a name and it will swap the last name to be in the front");
-            Console.WriteLine("28.Enter two numbers to determine which one is smaller");
-            Console.WriteLine("29. A function that takes an integer and returns the factorial of that integer. \n That is, the integer multiplied by all positive lower integers.");
-
+            Console.WriteLine("26. hamming distance and stuffn");
+            Console.WriteLine("27. shuffle the first anD LAST NAME");
+            Console.WriteLine("28. Find the minimum in an array");
+            Console.WriteLine("29. Return the factorial of a number: factorial is a integer multiplied by all positive lower integers");
+            Console.WriteLine("30. Type a word to find how many vollews are inside of the word.");
 
 
 
@@ -351,7 +351,7 @@ class Challenges
                 case "26":
 
                     Console.WriteLine("You chose to calculate the Hamming Distance.");
-                    Console.WriteLine("Enter the first string: ");
+                    Console.WriteLine("Enter the first string (ex. abced, giraffe, monkey) and make sure they are the same length: ");
                     string str1 = Console.ReadLine();
 
                     Console.WriteLine("Enter the second string: ");
@@ -364,7 +364,6 @@ class Challenges
                         Console.WriteLine($"The Hamming Distance between the strings is: {distance}");
                     }
                     break;
-
                 case "27":
 
 
@@ -377,19 +376,24 @@ class Challenges
                 case "28":
                     Console.WriteLine("You chose to find the minimum in an array.");
                     Console.WriteLine("Enter numbers separated by commas (EXAMPLE: 1,2,3,4): ");
-                    string fresitatapper = Console.ReadLine();
-                    int[] inputArray = fresitatapper.Split(',').Select(int.Parse).ToArray();
+                    string sheesh = Console.ReadLine();
+                    int[] inputArray = sheesh.Split(',').Select(int.Parse).ToArray();
                     int minimumValue = FindMinimum(inputArray);
                     Console.WriteLine($"The minimum number is {minimumValue}.");
                     break;
 
                 case "29":
-                    Console.WriteLine(" Enter a number to find the factoral of it.");
+                    Console.WriteLine("You chose to calculate the factorial of a number.");
                     Console.Write("Enter a number: ");
-                    int getajopb = int.Parse(Console.ReadLine());
-                    Console.WriteLine($"Factorial of {getajopb} is: {Factorial(getajopb)}");
-                   
+                    int poop = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"Factorial of {poop} is: {Factorial(poop)}");
+                    break;
 
+                case "30":
+                    Console.WriteLine("You chose to count the vowels in a word.");
+                    Console.Write("Enter a word: ");
+                    string inputWord = Console.ReadLine();
+                    Console.WriteLine($"Number of vowels in \"{inputWord}\" is: {CountVowels(inputWord)}");
                     break;
 
 
@@ -578,7 +582,7 @@ class Challenges
         // Check if strings are the same length
         if (str1.Length != str2.Length)
         {
-            Console.WriteLine("wrong length foo");
+            Console.WriteLine("wrong length bro");
             return -1; // Return an error value
         }
 
@@ -594,8 +598,6 @@ class Challenges
 
         return hammingDistance; // Return the calculated distance
     }
-
-
     public static string NameShuffle(string name)
     {
         // Split the name into first and last using space as a separator
@@ -604,12 +606,12 @@ class Challenges
         // Return the reversed order of the name
         return parts[1] + " " + parts[0];
     }
+
     public static int FindMinimum(int[] numbersArray)
     {
         int smallest = numbersArray.Min();
         return smallest;
     }
-
     public static int Factorial(int number)
     {
         if (number < 0)
@@ -622,6 +624,21 @@ class Challenges
         }
         return result;
     }
+    public static int CountVowels(string input)
+    {
+        int count = 0;
+        string vowels = "aeiouAEIOU";
+
+        foreach (char c in input)
+        {
+            if (vowels.Contains(c))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
 
 
 
@@ -633,16 +650,6 @@ class Challenges
 
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
